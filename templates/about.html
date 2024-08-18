@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome cdnjs liberary -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+    <!-- Google Font  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet" />
+    <!-- Custom Css File  -->
+    <link rel="stylesheet" href="static/css/style.css" />
+    <title>Gym Website</title>
+  </head>
+  <body>
+    <br>
+    <br>
+    <br>
+    <section class="about" id="about">
+        <h3 class="heading">Hello, We are the <span>GYM</span></h3>
+        <div class="row">
+          <div class="content">
+            <h3>What About Our <span>Gym</span>?</h3>
+            {% for i in AboutData%}
+            <p>
+              {{i.about_des}}
+            </p>
+            <br>
+            {% endfor %}
+          </div>
+          
+          <div class="image">
+            <img src="static/img/about-us.jpg" alt="" />
+          </div>
+          
+        </div>
+      </section>
+      <section class="info">
+        <h3>DON'T <span>THINK</span>, BEGIN <span>TODAY</span>!</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          magnam possimus iste optio? Temporibus hic velit atque enim nam labore
+          quisquam tempora eos nisi provident.
+        </p>
+        <a href="#" class="btn">become a member</a>
+      </section>
+    <script src="static/js/main.js"></script>
+</body>
+</html>
+{% endblock content %}
