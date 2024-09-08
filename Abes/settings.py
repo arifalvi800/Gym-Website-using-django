@@ -25,13 +25,13 @@ SECRET_KEY = 'django-insecure-#n=abgpt$ze7i)7)!u)_j=cc$p+%$up@))1s-*ywudl7%wjfvm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'contact.apps.AboutConfig',
+    'contact.apps.ContactConfig',
     'about.apps.AboutConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -57,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [BASE_DIR / "templates",
-        "/var/www/templates/",],
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,8 +127,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    "/var/www/static/",
 ]
 
 MEDIA_ROOT=BASE_DIR /"media"
 MEDIA_URL= "/media/"
+
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'https://localhost:8000']

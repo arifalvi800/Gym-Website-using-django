@@ -29,18 +29,20 @@
         <h3 class="heading">contact <span>us</span></h3>
         <div class="row">
           <form action="" method="POST">
+            {% csrf_token %}
             <h3>Feel free to ask anything</h3>
             <input type="text" placeholder="name" name="name">
             <input type="email" placeholder="email" name="email">
+            <input type="phone" placeholder="phone" name="phone">
             <input type="text" placeholder="subject" name="subject">
             <textarea placeholder="message" name="message"></textarea>
-            <a href="#" class="btn">Submit</a>
+            <button type="submit" class="btn">Submit</button>
           </form>
           <div class="map">
             <iframe class="location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27414.69861362488!2d30.828360399999998!3d30.8071959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f63475187f5365%3A0xfa15040aa59fe1de!2sAd%20Delgamon%2C%20Kafr%20El%20Zayat%2C%20Gharbia%20Governorate!5e0!3m2!1sen!2seg!4v1659465484466!5m2!1sen!2seg"
               width="550"
-              height="450"
+              height="509"
               style="border: 0"
               allowfullscreen=""
               loading="lazy"
