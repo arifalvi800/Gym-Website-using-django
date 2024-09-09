@@ -33,20 +33,21 @@
             <br>
             {% endfor %}
           </div>
-          
+          {%for j in ImageData%}
           <div class="image">
-            <img src="static/img/about-us.jpg" alt="" />
+            <img src="{{j.about_img.url }}" alt="" />
           </div>
-          
+          {% endfor %}
         </div>
       </section>
       <section class="info">
-        <h3>DON'T <span>THINK</span>, BEGIN <span>TODAY</span>!</h3>
+        {% for i in SlogunData%}
+        
+        <h3>{{i.slogun_heading}}</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-          magnam possimus iste optio? Temporibus hic velit atque enim nam labore
-          quisquam tempora eos nisi provident.
+          {{i.slogun_des}}
         </p>
+        {% endfor %}
         <a href="#" class="btn">become a member</a>
       </section>
     <script src="static/js/main.js"></script>

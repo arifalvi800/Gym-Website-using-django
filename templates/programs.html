@@ -27,42 +27,19 @@
     <section class="programs" id="programs">
         <h3 class="heading">Our <span>Programs</span></h3>
         <div class="row">
+          {% for i in ProgramData%}
           <div class="box">
             <div class="image">
-              <img src="static/img/Fitness-icon.png" alt="" />
+              <img src="{{i.program_img.url}}" alt="" />
             </div>
             <div class="content">
-              <h3>Basic Fitness</h3>
+              <h3>{{i.program_heading}}</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-                minima eum facere voluptas aliquid voluptate!
+                {{i.program_des}}
               </p>
             </div>
           </div>
-          <div class="box">
-            <div class="image">
-              <img src="static/img/BodyBuilding-icon.png" alt="" />
-            </div>
-            <div class="content">
-              <h3>Body Building</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-                minima eum facere voluptas aliquid voluptate!
-              </p>
-            </div>
-          </div>
-          <div class="box">
-            <div class="image">
-              <img src="static/img/Yoga-icon.png" alt="" />
-            </div>
-            <div class="content">
-              <h3>Yoga Training</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-                minima eum facere voluptas aliquid voluptate!
-              </p>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </section>
       <br>
