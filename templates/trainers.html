@@ -27,15 +27,15 @@
     <section class="trainers" id="trainers">
       <h3 class="heading">Expert <span>Trainers</span></h3>
       <div class="row">
+        {% for i in TrainerData%}
         <div class="box">
           <div class="image">
-            <img src="static/img/trainer-1.jpg" alt="" />
+            <img src="{{i.trainer_img.url}}" alt="" />
           </div>
-          <span>Strength Trainer</span>
-          <h3>Ivan Samkov</h3>
+          <span>{{i.trainer_heading}}</span>
+          <h3>{{i.trainer_name}}</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Architecto, velit.
+            {{i.trainer_des}}
           </p>
           <div class="social-icons">
             <i class="fab fa-facebook-f"></i>
@@ -44,40 +44,7 @@
             <i class="fab fa-instagram"></i>
           </div>
         </div>
-        <div class="box">
-          <div class="image">
-            <img src="static/img/trainer-2.jpg" alt="" />
-          </div>
-          <span>Yoga Trainer </span>
-          <h3>Karolina Grabowska</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Architecto, velit.
-          </p>
-          <div class="social-icons">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-instagram"></i>
-          </div>
-        </div>
-        <div class="box">
-          <div class="image">
-            <img src="static/img/trainer-3.jpg" alt="" />
-          </div>
-          <span>Strength Trainer </span>
-          <h3>Andrea Piacquadio</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Architecto, velit.
-          </p>
-          <div class="social-icons">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-instagram"></i>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </section>
     
